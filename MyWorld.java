@@ -5,5 +5,8 @@ public class MyWorld extends World {
         super(600, 400, 1);
         Hero hero = new Hero();
         addObject(hero, 100, 100);
+        
+        Vehicle car = new Vehicle();
+        addObject(car, 600, 100);
     }
 }
