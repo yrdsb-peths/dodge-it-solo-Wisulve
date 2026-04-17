@@ -9,7 +9,7 @@ public class Vehicle extends Actor
         }
         if(isTouching(Hero.class)){
             Sadface sadFace = new Sadface();
-            getWorld().addObject(sadFace,300,300);
+            getWorld().addObject(sadFace,300,200);
             getWorld().removeObject(this);
         }
     }
