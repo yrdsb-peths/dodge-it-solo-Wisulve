@@ -8,12 +8,18 @@ public class Vehicle extends Actor
             resetVehicle();
         }
         if(isTouching(Hero.class)){
+            World world = getWorld();
             Sadface sadFace = new Sadface();
-            getWorld().addObject(sadFace,300,200);
-            getWorld().removeObject(this);
+            world.addObject(sadFace, 300, 200);
+            
+            Actor hero = getOneIntersectingObject(Hero.class);
+            world.removeObject(hero);
+            world.removeObject(this);
+            Greenfoot.stop();
         }
     }
     public void resetVehicle(){
+        // randomly choose lane 0 or 1
         int num = Greenfoot.getRandomNumber(2);
         if(num == 0){
             setLocation(600, 100);

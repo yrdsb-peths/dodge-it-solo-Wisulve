@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hero extends Actor
 {
+    // true means Hero is in the top lane; false means bottom lane
     boolean atTop = true;
     public void act()
     {
