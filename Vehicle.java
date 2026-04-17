@@ -7,6 +7,11 @@ public class Vehicle extends Actor
         if(getX() <= 0){
             resetVehicle();
         }
+        if(isTouching(Hero.class)){
+            Sadface sadFace = new Sadface();
+            getWorld().addObject(sadFace,300,300);
+            getWorld().removeObject(this);
+        }
     }
     public void resetVehicle(){
         int num = Greenfoot.getRandomNumber(2);
